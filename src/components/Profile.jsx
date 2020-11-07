@@ -17,15 +17,15 @@ class Profile extends Component {
 
   async componentDidMount() {
     // api se fetch 
-      let userObj = await axios.get("http://localhost:3000/user/80b5f987-6e55-4264-9245-5fd75faa92e7");
+      let userObj = await axios.get("https://insta-backend-api.herokuapp.com/user/80b5f987-6e55-4264-9245-5fd75faa92e7");
       let user = userObj.data.user;
-      let requestObj = await axios.get("http://localhost:3000/user/request/80b5f987-6e55-4264-9245-5fd75faa92e7")
+      let requestObj = await axios.get("https://insta-backend-api.herokuapp.com/user/request/80b5f987-6e55-4264-9245-5fd75faa92e7")
       let pendingRequests = requestObj.data.data;
-      let followingObj =await axios.get("http://localhost:3000/user/following/80b5f987-6e55-4264-9245-5fd75faa92e7")
-      let followerObj =await axios.get("http://localhost:3000/user/follower/80b5f987-6e55-4264-9245-5fd75faa92e7")
+      let followingObj =await axios.get("https://insta-backend-api.herokuapp.com/user/following/80b5f987-6e55-4264-9245-5fd75faa92e7")
+      let followerObj =await axios.get("https://insta-backend-api.herokuapp.com/user/follower/80b5f987-6e55-4264-9245-5fd75faa92e7")
       let following = followingObj.data.data;
       let followers = followerObj.data.data;
-      let postData = await axios.get("http://localhost:3000/post/80b5f987-6e55-4264-9245-5fd75faa92e7");
+      let postData = await axios.get("https://insta-backend-api.herokuapp.com/post/80b5f987-6e55-4264-9245-5fd75faa92e7");
       let postCount = postData.data.data;
       
       this.setState({

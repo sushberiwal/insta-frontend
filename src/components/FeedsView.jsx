@@ -46,7 +46,7 @@ class FeedsView extends Component {
   async componentDidMount(){
       // api se posts fetch
       // backend => axios.get()
-      let postData = await axios.get("http://localhost:3000/post");
+      let postData = await axios.get("https://insta-backend-api.herokuapp.com/post");
       let posts = postData.data.data;
 
       console.log(posts);
@@ -57,7 +57,7 @@ class FeedsView extends Component {
       let users = [];
       for(let i=0 ; i<uids.length ; i++){
           let uid = uids[i];
-          let userData = await axios.get(`http://localhost:3000/user/${uid}`);
+          let userData = await axios.get(`https://insta-backend-api.herokuapp.com/user/${uid}`);
           users.push(userData.data.user);
       }
       console.log(users);

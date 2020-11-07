@@ -20,7 +20,7 @@ class CreatePost extends Component {
         formData.append('postImage', uploadedImage);  
         formData.append('uid' , "80b5f987-6e55-4264-9245-5fd75faa92e7");
         formData.append('caption' , caption)
-        await axios.post("http://localhost:3000/post" , formData);
+        await axios.post("https://insta-backend-api.herokuapp.com/post" , formData);
         this.props.updatePosts();
     }
 

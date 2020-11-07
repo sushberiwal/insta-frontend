@@ -27,7 +27,7 @@ class ProfileView extends Component {
           })
       }
       else if(view == "REQUESTS" && this.state.currentView != "REQUESTS"){
-        let requestObj = await axios.get("http://localhost:3000/user/request/80b5f987-6e55-4264-9245-5fd75faa92e7")
+        let requestObj = await axios.get("https://insta-backend-api.herokuapp.com/user/request/80b5f987-6e55-4264-9245-5fd75faa92e7")
         let pendingRequests = requestObj.data.data;
         this.setState({
             currentView :view,
@@ -35,7 +35,7 @@ class ProfileView extends Component {
         })
       }
       else if(view == "FOLLOWING" && this.state.currentView != "FOLLOWING"){
-        let followingObj =await axios.get("http://localhost:3000/user/following/80b5f987-6e55-4264-9245-5fd75faa92e7")
+        let followingObj =await axios.get("https://insta-backend-api.herokuapp.com/user/following/80b5f987-6e55-4264-9245-5fd75faa92e7")
         let following = followingObj.data.data;
         this.setState({
             currentView :view,
@@ -43,7 +43,7 @@ class ProfileView extends Component {
         })
       }
       else if(view == "FOLLOWERS" && this.state.currentView != "FOLLOWERS"){
-        let followerObj =await axios.get("http://localhost:3000/user/follower/80b5f987-6e55-4264-9245-5fd75faa92e7")
+        let followerObj =await axios.get("https://insta-backend-api.herokuapp.com/user/follower/80b5f987-6e55-4264-9245-5fd75faa92e7")
         let followers = followerObj.data.data;
         this.setState({
             currentView :view,

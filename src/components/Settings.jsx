@@ -19,7 +19,7 @@ class Setting extends Component {
   fileUpload = React.createRef();
 
   async componentDidMount(){
-    let userObj = await axios.get("http://localhost:3000/user/80b5f987-6e55-4264-9245-5fd75faa92e7");
+    let userObj = await axios.get("https://insta-backend-api.herokuapp.com/user/80b5f987-6e55-4264-9245-5fd75faa92e7");
     let user = userObj.data.user;
     let {name , handle , bio , phone , email , pImage , is_public } = user;
     console.log(user);
@@ -68,7 +68,7 @@ class Setting extends Component {
       formData.append('name' , this.state.name );
       formData.append('handle' , this.state.handle );
       formData.append('bio' , this.state.bio);
-      let patchData =await axios.patch("http://localhost:3000/user/80b5f987-6e55-4264-9245-5fd75faa92e7" , formData);
+      let patchData =await axios.patch("https://insta-backend-api.herokuapp.com/user/80b5f987-6e55-4264-9245-5fd75faa92e7" , formData);
       console.log(patchData);
       this.componentDidMount();
   }
