@@ -1,0 +1,6 @@
+.profile-view{
+    display:flex;
+    /* background:lightblue; */
+    justify-content: space-evenly;
+    width: 700px;
+}
