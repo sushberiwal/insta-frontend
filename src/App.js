@@ -6,6 +6,7 @@ import Header from "./components/Header";
 
 import Setting from "./components/Settings";
 import UserView from "./components/UserView";
+import Mypost from "./components/Mypost";
 
 // jsx => js
 
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/settings" exact>
             <Setting />
+          </Route>
+          <Route path="/mypost" exact>
+          < Mypost />
           </Route>
           <Redirect to="/">
             <UserView />
